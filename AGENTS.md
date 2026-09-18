@@ -154,3 +154,4 @@
 - 代码内用户可见文案统一用英文。
 - `.envrc` 可提交，提供默认值并引入 `.env.secrets`；`.env.secrets` 存 key，已屏蔽，不得提交。
 - 源码：`src/main.rs` 入口，`cli`/`config`/`llm` 基础模块，`cmd_tr`/`cmd_commit`/`cmd_doctor` 各子命令。
+- 发布：`.github/workflows/release.yml`，main/PR/tag 均构建多平台二进制并上传 artifact，仅 `v*` tag 建 GitHub Release（产物为平台命名的可直接运行二进制 `aikit-<target>`）。
